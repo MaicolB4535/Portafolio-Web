@@ -1,0 +1,631 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: rgb(6, 6, 83);
+    --secondaryColor: rgb(220, 220, 220);
+    --thirdColor: #fff;
+    --fourthColor: #000;
+    --footerColor: #9e9191c4;
+}
+
+body{
+    background-color: var(--primaryColor) !important;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+} 
+
+nav.bg-nav{
+    background: var(--primaryColor);
+}
+
+.container .navbar-brand{
+    color: var(--thirdColor);
+    font-size: 40px;
+}
+
+header nav.bg-nav ul li{
+    margin: 14px 10px 0 10px;
+}
+
+header nav.bg-nav ul li a{
+    color: var(--thirdColor);
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav.bg-nav ul li a:hover{
+    color: var(--thirdColor);
+}
+
+nav.bg-nav ul li a::after{
+    width: 0;
+    height: 2px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+}
+
+nav.bg-nav ul li a:hover::after{
+    width: 83%;
+    background: var(--thirdColor);
+}
+
+header nav .container img{
+    background: var(--thirdColor);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+#navbarNav{
+    margin-left: 100px;
+}
+
+#hero{
+    background: var(--primaryColor);
+    padding: 100px 0;
+}
+
+#hero .imagen img{
+    border-radius: 20px;
+    width: 400px;
+    height: 350px;
+    margin-left: 100px;
+}
+
+#hero .texto{
+    color: var(--thirdColor);
+    margin-top: -20px;
+}
+
+#hero .texto h2{
+    font-size: 40px;
+    margin: 10px 0;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 14ch;
+    animation: typing 2s steps(16), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#hero .texto p{
+    width: 350px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#hero .texto a button{
+    background: var(--secondaryColor);
+    height: 50px;
+    width: 200px;
+    margin: 10px 0 0 0;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#hero .contacto a img {
+    background: var(--thirdColor);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 1px solid var(--primaryColor);
+    margin: 20px 0 0;
+}
+
+
+/* Main */
+
+main{
+    width: 100%;
+    background: var(--primaryColor);
+}
+
+#p_profesional{
+    position: relative;
+    padding: 30px;
+}
+
+#p_profesional .container{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    gap: 50px;
+}
+
+#p_profesional .imagen img{
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#p_profesional .texto{
+    color: var(--thirdColor);
+    width: 400px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#p_profesional .texto a button{
+    background: var(--secondaryColor);
+    height: 50px;
+    width: 200px;
+    margin: 10px 0 0 0;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#p_profesional .texto a img {
+    background: var(--thirdColor);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 1px solid var(--primaryColor);
+    margin: 0 20px 0;
+}
+
+/* seccion habilidades */
+
+#habilidades{
+    padding-top: 40px;
+}
+
+#habilidades h2{
+    font-style: italic;
+    margin: 40px ;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+.secHabilidades{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.graficos{
+    position: relative;
+    justify-content: center;
+}
+
+#habilidades .graficos h3{
+    text-align: center;
+    font-size: 20px;
+    margin: 0px 30px 30px;
+    color: var(--thirdColor);
+}
+
+#habilidades .graficos h3:last-child{
+    margin: 0px 0px 30px;
+}
+
+.graficos span{
+    position: absolute;
+    left: 64px;
+    top: 65px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--thirdColor);
+}
+
+svg{
+    width: 150px;
+    height: 150px;
+    margin: 25px 16px;
+}
+
+circle{
+    fill: none;
+    stroke: var(--primaryColor);
+    stroke-width: 15px;
+    stroke-dasharray: 100 100;
+    transform-origin: 50%;
+    transform: rotate(-90deg);
+}
+
+circle:nth-child(2){
+    stroke-linecap: round;
+    stroke: var(--fourthColor);
+    stroke-opacity: 0.9;
+    animation: rellenar 5s linear forwards; 
+    animation-timeline: scroll(view);
+}
+
+@keyframes rellenar {
+    from{
+        stroke-dasharray: 0 100;
+    }
+
+    to{
+        stroke-dasharray: var(--porcentaje) ;
+
+    }
+}
+
+/* sección proyectos */
+
+#proyectos{
+    padding-top: 30px;
+}
+
+#proyectos h2{
+    font-style: italic;
+    margin: 40px ;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+#proyectos .tarjetas{
+    gap: 60px;
+    justify-content: center;
+}
+
+#proyectos .card{
+    background: var(--primaryColor);
+    color: var(--thirdColor);
+    text-align: center;
+}
+
+#proyectos .card img{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid var(--thirdColor);
+}
+
+#proyectos .tarjetas .vertical img{
+    margin-left: 75px;
+    width: 110px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid var(--thirdColor);
+} 
+
+
+/* seccion hobbies */
+
+#hobbies{
+    padding-top: 50px;
+}
+
+#hobbies h2{
+    font-style: italic;
+    margin: 40px ;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+#carouselHobbiesCaptions{
+    position: relative;
+    left: 170px;
+    height: 500px;
+    width: 1000px !important;
+}
+
+.carousel-item img{
+    height: 500px;
+    width: 1000px;
+    position: relative;
+}
+
+#carouselHobbiesCaptions .contenido{
+    width: 100%;
+}
+
+#carouselHobbiesCaptions .carousel-item .carousel-caption{
+    bottom: 36%;
+}
+
+#carouselHobbiesCaptions .carousel-item .carousel-caption h5{
+    font-size: 50px;
+}
+
+
+/* Sección estudios */
+
+#estudios{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#estudios h2{
+    font-style: italic;
+    margin: 40px ;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+#estudios .container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#estudios .container .accordion img{
+    width: 200px;
+    height: 200px;
+}
+
+#estudios .container .accordion-body{
+    width: 260px;
+    height: 110px;
+    background: var(--footerColor);
+    text-align: center;
+    overflow-y: hidden;
+    font-size: 15px;
+}
+
+.accordion-button::after{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height: 32vh;
+    background: var(--footerColor);
+    text-align: center;
+}
+
+footer h2{
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    color: var(--thirdColor);
+    padding-left: 60px;
+    padding-top: 15px;
+}
+
+footer .contactos{
+    width: 100%;
+    justify-content: center;
+}
+
+footer .col-lg-2{
+    width: 85px;
+}
+
+footer .col-lg-2 img{
+    background: var(--thirdColor);
+    border-radius: 100%;
+}
+
+
+footer p{
+    padding: 8px 0 0;
+    font-weight: 600;
+}
+
+footer p span{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media(max-width: 450px){
+
+    header{
+        width: 100%;
+        height: 100vh;
+    } 
+
+    header #navbarNav {
+        text-align: center;
+        position: absolute;
+        z-index: 20;
+        top: 94px;
+        left: -100px;
+        width: 100%;
+        font-weight: bold;
+        background: var(--primaryColor);
+        padding-bottom: 20px;
+    }
+    
+    nav.bg-nav ul li a::after{
+        width: 0;
+        height: 2px;
+        background: transparent;
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 150px;
+    }
+    
+    nav.bg-nav ul li a:hover::after{
+        width: 25%;
+        background: var(--thirdColor);
+    }
+
+    #p_profesional .container {
+        display: flex;
+        padding-top: 50px;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #hero .imagen img {
+        border-radius: 20px;
+        width: 332px;
+        height: 333px;
+        margin: -35px 27px 34px;
+    }
+
+    #hero .texto{
+        text-align: center;
+    }
+
+    #hero .texto h2{
+        margin-left: 34px;
+    }
+
+    #hero .texto p {
+        width: 350px;
+        font-size: 13px;
+        font-weight: 400;
+        margin-left: 20px;
+    }
+
+    #hero .contacto{
+        display: none;
+    }
+
+    #p_profesional {
+        position: relative;
+        top: -25px;
+        left: 140px;
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+
+    #p_profesional .imagen img{
+        height: 200px;
+        width: 200px;
+    }
+
+    #p_profesional .texto {
+        color: var(--thirdColor);
+        width: 169px;
+        font-weight: 500;
+        font-size: 10px;
+        margin-right: 74px;
+    }
+
+    #p_profesional .texto a button {
+        position: relative;
+        right: 90px;
+        background: var(--secondaryColor);
+        height: 35px;
+        width: 150px;
+        margin: 10px 0 0;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    #p_profesional .texto a img {
+        display: none;
+    }
+
+    #habilidades{
+        padding-top: 0;
+    }
+
+    #proyectos {
+        padding-top: 75px;
+    }
+
+    #hobbies {
+        padding-top: 34px;
+    }
+
+    
+    #carouselHobbiesCaptions {
+        position: relative;
+        left: 28px;
+        height: 430px;
+        width: 369px !important;
+    }
+
+    .carousel-item img {
+        height: 420px;
+    }
+
+    #estudios .container{
+        display: inline-block;
+    }
+
+    #estudios .container .accordion img{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #estudios .container .accordion-body{
+        width: 100%;
+        height: 200px;
+        background: var(--footerColor);
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #estudios .container .accordion-item{
+        position: relative;
+        left: 70px;
+        width: 240px;
+        margin: 30px 0;
+    }
+    
+    .accordion-button::after{
+        display: none;
+    }
+
+    footer{
+        width: 100%;
+        height: 30vh;
+        background: var(--footerColor);
+        text-align: center;
+    }
+    
+    footer h2{
+        font-style: italic;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: left;
+        color: var(--primaryColor);
+        padding-left: 120px;
+        padding-top: 15px;
+    }
+
+    footer .contactos{
+        width: 420px;
+    }
+    
+    footer p{
+        padding: 8px 0 0;
+        font-weight: 600;
+    }
+    
+    footer p span{
+        color: #000;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
